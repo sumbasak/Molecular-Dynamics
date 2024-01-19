@@ -1,3 +1,5 @@
+# Created on 13-Oct-2023
+
 def read_file(file_path):
     
     # open the file without the need to close the file
