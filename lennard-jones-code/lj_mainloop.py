@@ -83,9 +83,9 @@ for step in range(1, nscans + 1):
         total_pot_en += average_pot_en
         total_temp += instant_temp
     
-    # Allow monitoring of progress of iteration
+    # Allow monitoring of the progress of iteration
     if step % (nscans * 0.1) == 0:
-        print(">>>>>> Iteration # %d out of %d" %(step, nscans))
+        print(">>>>>> Iteration %d out of %d" %(step, nscans))
 
 effective_scans = nscans - ignore_steps
 print("\n>>>>>> Statistical Averages <<<<<<\n") #real-time progress of the compilation
