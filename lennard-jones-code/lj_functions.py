@@ -1,3 +1,5 @@
+# Created on 26-Aug-2023
+
 def initiate_loc_vel_acc(ndim, npart, boxsize):
     '''
     Providing locations and velocities in all three axes from random
