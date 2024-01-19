@@ -4,9 +4,9 @@ def initiate_loc_vel_acc(ndim, npart, boxsize):
     distribution. Variables that have been used should be self-explanatory.
 
 	For each particle, a 3D coordinate and 3D velocity vector have been 
- 	picked up. Once done, the location has been copied to another variable
+	picked up. Once done, the location has been copied to another variable
 	and that has been divided by the box size to reduce the 3D coordinates in 
- 	box length. 
+	box length. 
     
     That copying is necessary since changing the numpy array in the future would
 	not impact the arrays that were created in the past. To avoid any overlapping
@@ -250,7 +250,7 @@ for step in range(1, nscans + 1):
                                                                   npart, vel, 
                                                                   boxsize, 
                                                                   reference_temp)
-    # Is step is 20% of the scans, scale the velocities
+    # If step is 20% of the scans, scale the velocities
     if step <= (nscans * 0.2):
         vel = update_vel(vel, scaling_factor, dt, acc)
     
@@ -260,7 +260,7 @@ for step in range(1, nscans + 1):
                                                                       boxsize, 
                                                                       reference_temp)
     
-    # If step is beyond 20% of the scans, don't scale the velocities
+    # If the step is beyond 20% of the scans, don't scale the velocities
     else:
         vel = update_vel_unscaled(vel, dt, acc)
         
